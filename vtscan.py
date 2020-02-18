@@ -76,10 +76,10 @@ def main():
     scans = resp.json()['scans']
     table_data = [['--VENDOR--', '--STATUS--', '--RESULT--', '--UPDATE--']]
     for scan in scans:
-        detected = colored("not detected", "red", attrs=["bold"])
+        detected = colored("not detected", "green", attrs=["bold"])
         scan_result = "N/A"
         if scans[scan]['detected']:
-            detected = colored("detected", "green", attrs=["bold"])
+            detected = colored("detected", "red", attrs=["bold"])
         if scans[scan]['result'] != None:
             scan_result = scans[scan]["result"]
         date = str(scans[scan]['update'])
