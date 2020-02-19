@@ -1,4 +1,4 @@
-#!/usr/bin/python3.7
+#!/usr/bin/env python
 import json
 from huepy import *
 import argparse
@@ -9,7 +9,10 @@ from termcolor import colored
 from terminaltables import SingleTable
 import subprocess
 
-api_key="" #Paste your VirusTotal API key here, or pass it with "-k" flag
+if "VTSCAN_API_KEY" in os.environ:
+    api_key=os.environ.get("VTSCAN_API_KEY") #export VTSCAN_API_KEY=YOURAPIKEY or pass it with "-k" flag
+else:
+    api_key=""
 
 def check_response_code(resp):
     if resp.status_code == 204:
