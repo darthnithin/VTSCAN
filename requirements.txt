@@ -1,5 +1,4 @@
 huepy
-json
 terminaltables
 termcolor
 requests
