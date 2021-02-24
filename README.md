@@ -5,6 +5,15 @@ Scan a file directly from your terminal using VirusTotal API
 <p align="center">
 <img src="screenshot.png" width="836"/>
 </p>
+## Installation
+
+```
+git clone https://github.com/redcode-labs/VTSCAN
+
+cd ./VTSCAN
+
+pip install -r ./requirements.txt
+```
 
 ## Usage
 In order for this script to work, define your VirusTotal API key in the `api_key` variable inside it, or pass it using `-k <you_key_here>`
